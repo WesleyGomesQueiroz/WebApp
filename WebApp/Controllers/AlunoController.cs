@@ -28,5 +28,16 @@ namespace WebApp.Controllers
 
             return aluno.listaAlunos().Where(x => x.id == id).FirstOrDefault();
         }
+
+        [HttpPost]
+        [Route("Create")]
+        public List<Alunos> Create(Alunos aluno)
+        {
+            List<Alunos> alunos = new List<Alunos>();
+
+            alunos.Add(aluno);
+
+            return alunos;
+        }
     }
 }
