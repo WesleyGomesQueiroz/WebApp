@@ -17,7 +17,7 @@ namespace WebApp.Controllers
         {
             Alunos aluno = new Alunos();
 
-            return aluno.listaAlunos();
+            return aluno.ListaAlunos();
         }
 
         [HttpGet]
@@ -26,7 +26,7 @@ namespace WebApp.Controllers
         {
             Alunos aluno = new Alunos();
 
-            return aluno.listaAlunos().Where(x => x.id == id).FirstOrDefault();
+            return aluno.ListaAlunos().Where(x => x.id == id).FirstOrDefault();
         }
 
         [HttpPost]
