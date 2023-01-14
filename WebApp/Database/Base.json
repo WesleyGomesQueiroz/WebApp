@@ -1,0 +1,23 @@
+﻿[
+  {
+    "id": 1,
+    "nome": "Wesley",
+    "sobrenome": "Gomes Queiroz",
+    "telefone": "11 958657154",
+    "ra": 1
+  },
+  {
+    "id": 2,
+    "nome": "Daisy",
+    "sobrenome": "Galvão",
+    "telefone": "11 958657154",
+    "ra": 2
+  },
+  {
+    "id": 3,
+    "nome": "Shelby",
+    "sobrenome": "Galvão Queiroz",
+    "telefone": "11 958657154",
+    "ra": 3
+  }
+]
