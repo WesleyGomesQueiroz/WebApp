@@ -20,6 +20,13 @@ namespace WebApp.Controllers
             return aluno.listaAlunos();
         }
 
+        [HttpGet]
+        [Route("GetById/{id}")]
+        public Alunos GetById(int id)
+        {
+            Alunos aluno = new Alunos();
 
+            return aluno.listaAlunos().Where(x => x.id == id).FirstOrDefault();
+        }
     }
 }
