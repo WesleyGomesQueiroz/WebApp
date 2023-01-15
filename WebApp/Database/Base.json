@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "id": 1,
     "nome": "Wesley",
@@ -19,5 +19,12 @@
     "sobrenome": "Galvão Queiroz",
     "telefone": "11 958657154",
     "ra": 3
+  },
+  {
+    "id": 4,
+    "nome": "Teste",
+    "sobrenome": "Teste",
+    "telefone": "11 911112222",
+    "ra": 4
   }
 ]

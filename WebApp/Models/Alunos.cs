@@ -22,8 +22,10 @@ namespace WebApp.Models
 
         public bool RescreverArquivo(List<Alunos> listagemAlunos)
         {
-            var json = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Database", "Base.json"));
-            File.WriteAllText(json, JsonConvert.SerializeObject(listagemAlunos, Formatting.Indented));
+            var caminhoArquivo = Path.Combine(Directory.GetCurrentDirectory(), "Database", "Base.json");
+            var json = JsonConvert.SerializeObject(listagemAlunos, Formatting.Indented);
+
+            File.WriteAllText(caminhoArquivo, json);
             return true;
         }
 

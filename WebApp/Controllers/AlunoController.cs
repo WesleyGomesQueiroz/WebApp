@@ -33,11 +33,11 @@ namespace WebApp.Controllers
         [Route("Create")]
         public List<Alunos> Create(Alunos aluno)
         {
-            List<Alunos> alunos = new List<Alunos>();
+            Alunos _aluno = new Alunos();
 
-            alunos.Add(aluno);
+            _aluno.Inserir(aluno);
 
-            return alunos;
+            return _aluno.ListaAlunos();
         }
     }
 }
