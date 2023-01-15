@@ -12,8 +12,8 @@ namespace WebApp.Controllers
     public class AlunoController : ControllerBase
     {
         [HttpGet]
-        [Route("GetAll")]
-        public List<Alunos> GetAll()
+        [Route("Listar")]
+        public List<Alunos> Listar()
         {
             Alunos aluno = new Alunos();
 
@@ -21,8 +21,8 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
-        [Route("GetById/{id}")]
-        public Alunos GetById(int id)
+        [Route("PegarPorId/{id}")]
+        public Alunos PegarPorId(int id)
         {
             Alunos aluno = new Alunos();
 
@@ -30,14 +30,32 @@ namespace WebApp.Controllers
         }
 
         [HttpPost]
-        [Route("Create")]
-        public List<Alunos> Create(Alunos aluno)
+        [Route("Inserir")]
+        public List<Alunos> Inserir(Alunos aluno)
         {
             Alunos _aluno = new Alunos();
 
             _aluno.Inserir(aluno);
 
             return _aluno.ListaAlunos();
+        }
+
+        [HttpPut]
+        [Route("Atualizar/{id}")]
+        public Alunos Atualizar(int id, Alunos aluno)
+        {
+            Alunos _aluno = new Alunos();
+
+            return _aluno.Atualizar(id, aluno);
+        }
+
+        [HttpDelete]
+        [Route("Deletar/{id}")]
+        public bool Deletar(int id)
+        {
+            Alunos _aluno = new Alunos();
+
+            return _aluno.Deletar(id);
         }
     }
 }
